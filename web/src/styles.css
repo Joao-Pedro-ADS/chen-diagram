@@ -1,0 +1,63 @@
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body {
+  font: 14px/1.45 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #1e1e1e;
+}
+
+.app { display: flex; height: 100%; }
+
+.panel {
+  width: 340px;
+  flex: 0 0 340px;
+  border-right: 1px solid #e4e4e7;
+  padding: 16px;
+  overflow-y: auto;
+  background: #fafafa;
+}
+.panel h1 { font-size: 15px; margin: 0 0 2px; }
+.panel .sub { color: #71717a; font-size: 12px; margin: 0 0 16px; }
+
+.field { margin-bottom: 10px; }
+.field label { display: block; font-weight: 600; font-size: 12px; margin-bottom: 3px; }
+.field input[type="text"],
+.field input[type="password"],
+.field input[type="number"],
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #d4d4d8;
+  border-radius: 6px;
+  font: inherit;
+  background: #fff;
+}
+.field textarea { resize: vertical; min-height: 54px; font-family: ui-monospace, monospace; font-size: 12px; }
+.row { display: flex; gap: 8px; }
+.row .field { flex: 1; }
+
+.check { display: flex; align-items: center; gap: 6px; font-size: 12px; margin-bottom: 6px; }
+.check input { margin: 0; }
+
+button.primary {
+  width: 100%;
+  padding: 9px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: #6741d9;
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 6px;
+}
+button.primary:disabled { opacity: .55; cursor: default; }
+
+.msg { margin-top: 12px; padding: 8px 10px; border-radius: 6px; font-size: 12px; white-space: pre-wrap; }
+.msg.err { background: #ffe3e3; color: #c92a2a; }
+.msg.ok  { background: #e6fcf5; color: #087f5b; }
+
+.hint { font-size: 11px; color: #a1a1aa; margin-top: 14px; }
+.divider { height: 1px; background: #e4e4e7; margin: 14px 0; }
+
+.canvas-wrap { flex: 1; position: relative; min-width: 0; }
